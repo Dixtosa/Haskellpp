@@ -1,0 +1,88 @@
+=======================
+Extreme anonymous functions
+
+ნაცვლად
+for i in list1:
+	print "RED"
+for i in list2:
+	print "GREEN"
+for i in list3:
+	print "BLUE"
+
+ეს
+for i in %list:
+	print %color
+%[(list1, "RED"), (list2, "GREEN"), (list3, "BLUE")]
+
+ახლანდელი სიტუაცია:
+func = lambda list, color: for i in list: print color
+func(list1, "RED")
+func(list2, "GREEN")
+func(list3, "BLUE")
+
+ან
+func = lambda list, color: for i in list: print color
+map(func, [(list1, "RED"), (list2, "GREEN"), (list3, "BLUE")])
+
+==გოოდს==
+without cycles
+print %i % range(10)
+
+instead of
+for i in range(10):
+	print i
+
+//cycles are very important admit it
+// it is like using + 1 2 notation for 1 + 2. some ppl do like it :D
+
+==TODO THINK==
+for i in %list:
+	print %color
+%{[list1, list2], ["RED", "GREEN"]}
+produces:
+
+for i in list1:
+	print "RED"
+for i in list1:
+	print "GREEN"
+
+for i in list2:
+	print "RED"
+for i in list2:
+	print "GREEN"
+>any goods?
+hm
+
+=========================
+Partial parameters
+
+
+def func(a, b, c, d, e):
+	print a, b, c, d, e
+
+def newfunc = func(_, 2, _, 7, _)
+newfunc(1, 2, 4)
+
+ახლანდელი სიტუაცია:
+import functools
+functools.apply რაღაც ჯღართულად
+
+==TODO think==
+list = [1, 2, _, _, 16, 32, _] % (4, 8, 64)
+why not?
+but why yes?
+==========================
+Built-in Product oeprator
+
+
+list1 = [1, 20]
+list2 = [4]
+print list2 * list1
+#prints [(4, 1), (4, 20)]
+
+ახლა 
+import itertools
+itertools.prduct(list2, list1)
+
+
+
