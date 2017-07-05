@@ -1,4 +1,6 @@
 Haskellpp
 =========
 
-TemporarilyUnnamedProgrammingLanguage which is going to be pure functional programming language! Yikes
+Haskellpp is going to be a purely functional programming language! (If I ever have that much time...)
+
+Yay!
